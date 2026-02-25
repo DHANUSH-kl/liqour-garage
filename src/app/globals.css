@@ -1,0 +1,168 @@
+:root {
+  --color-bg: #0A0A08;
+  --color-surface: #111110;
+  --color-elevated: #1C1C1A;
+  --color-border: #2A2A26;
+  --color-gold: #C9A84C;
+  --color-gold-deep: #8B6914;
+  --color-text-primary: #E8E0D0;
+  --color-text-muted: #6B6560;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-16: 128px;
+  --space-20: 160px;
+  --space-24: 192px;
+  --space-32: 256px;
+
+  --transition-smooth: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-hover: 0.35s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+  /* Hide default cursor */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-font {
+  font-family: var(--font-bebas), sans-serif;
+}
+
+.serif-font {
+  font-family: var(--font-serif), serif;
+}
+
+/* Grain Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Image Cinematic Treatment */
+.cinematic-img {
+  filter: grayscale(40%);
+  /* Reduced from 100% for more vibrance */
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-gold);
+  mix-blend-mode: overlay;
+  opacity: 0.15;
+  /* Reduced from 0.25 for better clarity */
+  pointer-events: none;
+}
+
+/* Scroll Container */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Typography Utilities */
+.text-hero {
+  font-size: clamp(80px, 12vw, 160px);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.text-section {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.text-sub {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.text-editorial {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.text-product {
+  font-size: 28px;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.text-body {
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.text-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.text-micro {
+  font-size: 10px;
+  font-weight: 300;
+}

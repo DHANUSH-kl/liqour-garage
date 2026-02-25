@@ -1,0 +1,51 @@
+import type { Metadata } from "next";
+import { Bebas_Neue, Cormorant_Garamond, DM_Sans } from "next/font/google";
+import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas",
+  subsets: ["latin"],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ["300"],
+  style: ["italic"],
+  variable: "--font-serif",
+  subsets: ["latin"],
+});
+
+const dmSans = DM_Sans({
+  weight: ["300", "500"],
+  variable: "--font-body",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Liquor Garage | Mysore's Finest Spirits",
+  description: "Mysore's high-end brick-and-mortar liquor retail store experience.",
+};
+
+import Cursor from "@/components/Cursor/Cursor";
+import Navigation from "@/components/Navigation/Navigation";
+import { PreloaderProvider } from "@/components/Preloader/PreloaderContext";
+import Preloader from "@/components/Preloader/Preloader";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${bebasNeue.variable} ${cormorantGaramond.variable} ${dmSans.variable}`}>
+        <PreloaderProvider>
+          <Preloader />
+          <Cursor />
+          <Navigation />
+          {children}
+        </PreloaderProvider>
+      </body>
+    </html>
+  );
+}
