@@ -1,23 +1,21 @@
 import Hero from "@/components/Hero/Hero";
-import Marquee from "@/components/Marquee/Marquee";
-import BrandStatement from "@/components/BrandStatement/BrandStatement";
-import FeaturedCollection from "@/components/FeaturedCollection/FeaturedCollection";
-import SignaturePick from "@/components/SignaturePick/SignaturePick";
-import Experience from "@/components/Experience/Experience";
-import VisitCTA from "@/components/VisitCTA/VisitCTA";
-import Footer from "@/components/Footer/Footer";
+import Collection from "@/components/Collection/Collection";
+import OurDifference from "@/components/OurDifference/OurDifference";
+import OurImpact from "@/components/OurImpact/OurImpact";
+import CTASection from "@/components/CTASection/CTASection";
+import Location from "@/components/Location/Location";
+import PremiumGallery from "@/components/PremiumGallery/PremiumGallery";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Marquee />
-      <BrandStatement />
-      <FeaturedCollection />
-      <SignaturePick />
-      <Experience />
-      <VisitCTA />
-      <Footer />
+      <Collection />
+      <OurDifference />
+      <OurImpact />
+      <PremiumGallery />
+      <Location />
+      <CTASection />
     </main>
   );
 }

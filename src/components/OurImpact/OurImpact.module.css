@@ -1,0 +1,98 @@
+.section {
+    background-color: #2a2825;
+    /* Dark brownish-grey matching the image */
+    color: #ffffff;
+    padding: 6rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    max-width: 1000px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background-color: #f7f7f7;
+    /* Very light grey/white */
+    border-radius: 1rem;
+    padding: 3rem;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardNumber {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.cardDivider {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+.cardText {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .title {
+        margin-bottom: 3rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 2rem;
+        min-height: 250px;
+    }
+}

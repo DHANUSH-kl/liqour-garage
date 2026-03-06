@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
+import LuxuryNav from "@/components/Navbar/LuxuryNav";
+import Footer from "@/components/Footer/Footer";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -26,11 +29,6 @@ export const metadata: Metadata = {
   description: "Mysore's high-end brick-and-mortar liquor retail store experience.",
 };
 
-import Cursor from "@/components/Cursor/Cursor";
-import Navigation from "@/components/Navigation/Navigation";
-import { PreloaderProvider } from "@/components/Preloader/PreloaderContext";
-import Preloader from "@/components/Preloader/Preloader";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,12 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bebasNeue.variable} ${cormorantGaramond.variable} ${dmSans.variable}`}>
-        <PreloaderProvider>
-          <Preloader />
-          <Cursor />
-          <Navigation />
+        <LuxuryNav />
+        <SmoothScroll>
           {children}
-        </PreloaderProvider>
+        </SmoothScroll>
+        <Footer />
       </body>
     </html>
   );
