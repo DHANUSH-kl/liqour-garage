@@ -86,40 +86,39 @@ const OurDifference = () => {
                 let mm = gsap.matchMedia();
 
                 mm.add("(min-width: 769px)", () => {
-                    const cards = gsap.utils.toArray(`.${styles.card}`);
                     const totalWidth = carouselRef.current!.scrollWidth - window.innerWidth;
 
-                    gsap.to(cards, {
-                        xPercent: -100 * (cards.length - 1),
+                    gsap.to(carouselRef.current, {
+                        x: -totalWidth,
                         ease: "none",
                         scrollTrigger: {
                             trigger: carouselWrapperRef.current,
                             start: "top top",
-                            end: `+=${totalWidth}`,
+                            end: () => `+=${totalWidth * 3}`,
                             pin: true,
                             scrub: 1,
                             anticipatePin: 1,
+                            invalidateOnRefresh: true,
                         },
                     });
                 });
 
                 mm.add("(max-width: 768px)", () => {
-                    // Allow native overflow scrolling on mobile, with a subtle fade up for cards
-                    const cards = gsap.utils.toArray(`.${styles.card}`);
-                    cards.forEach((card: any, i) => {
-                        gsap.from(card, {
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 85%",
-                                toggleActions: "play none none reverse"
-                            },
-                            y: 50,
-                            opacity: 0,
-                            duration: 0.8,
-                            delay: i * 0.1,
-                            ease: "power3.out"
-                        });
-                    })
+                    const totalWidth = carouselRef.current!.scrollWidth - window.innerWidth;
+
+                    gsap.to(carouselRef.current, {
+                        x: -totalWidth,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: carouselWrapperRef.current,
+                            start: "top top",
+                            end: () => `+=${totalWidth * 2}`,
+                            pin: true,
+                            scrub: 1,
+                            anticipatePin: 1,
+                            invalidateOnRefresh: true,
+                        },
+                    });
                 });
 
                 return () => mm.revert();

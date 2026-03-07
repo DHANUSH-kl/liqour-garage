@@ -15,7 +15,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 }
 
 .badge {
@@ -49,7 +49,7 @@
     color: #555;
     line-height: 1.6;
     max-width: 600px;
-    margin-bottom: 2.5rem;
+    /* margin-bottom: 2.5rem; */
 }
 
 .ctaButton {
@@ -63,6 +63,7 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 122, 51, 0.3);
+    visibility: hidden;
 }
 
 .ctaButton:hover {
@@ -75,6 +76,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px;
+    box-sizing: border-box;
 }
 
 .carousel {
@@ -181,18 +184,12 @@
     }
 
     .carouselWrapper {
-        height: auto;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        padding: 2rem 0;
-    }
-
-    .carouselWrapper::-webkit-scrollbar {
-        display: none;
+        /* Revert to 100vh for GSAP pinning, same as desktop */
+        height: 100vh;
+        overflow: hidden;
+        /* Hide overflow so GSAP can move elements */
+        padding-top: 80px;
+        box-sizing: border-box;
     }
 
     .carousel {
@@ -202,6 +199,6 @@
 
     .card {
         width: 300px;
-        scroll-snap-align: center;
+        /* Remove scroll-snap, GSAP handles this now */
     }
 }
