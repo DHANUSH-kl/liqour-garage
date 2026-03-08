@@ -47,7 +47,7 @@ export default function LuxuryNav() {
                 <div className={styles.navContainer}>
                     {/* Logo */}
                     <Link
-                        href="#home"
+                        href="/#home"
                         className={`${styles.logoOuter} ${isMenuOpen ? styles.logoOuterOpen : ""}`}
                     >
                         <div className={styles.logoInner}>
@@ -94,11 +94,11 @@ export default function LuxuryNav() {
                 <div className={styles.overlayInner}>
                     <div className={styles.linksContainer}>
                         {[
-                            { label: "COLLECTION", href: "#collection" },
-                            { label: "WHY US", href: "#why-us" },
-                            { label: "IMPACT", href: "#impact" },
-                            { label: "MEMBERSHIP", href: "#membership" },
-                            { label: "GALLERY", href: "#gallery" },
+                            { label: "COLLECTION", href: "/#collection" },
+                            { label: "WHY US", href: "/#why-us" },
+                            { label: "IMPACT", href: "/#impact" },
+                            { label: "MEMBERSHIP", href: "/#membership" },
+                            { label: "GALLERY", href: "/#gallery" },
                         ].map((item, i) => (
                             <Link
                                 key={item.label}

@@ -5,20 +5,20 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Discover.module.css";
 
-// Sample liquor data using the existing assets
+// Sample liquor data using category-appropriate images
 const liquors = [
-    { id: 1, name: "The Highland Reserve", category: "Whiskey", image: "/lg1.jpg" },
-    { id: 2, name: "Botanical Classic", category: "Gin", image: "/lg2.jpg" },
-    { id: 3, name: "Double IPA Draft", category: "Beer", image: "/lg3.jpg" },
-    { id: 4, name: "Caribbean Dark", category: "Rum", image: "/lg4.jpg" },
-    { id: 5, name: "Aged Single Malt", category: "Whiskey", image: "/lg5.jpg" },
-    { id: 6, name: "Pink Floral Infusion", category: "Gin", image: "/lg6.jpg" },
-    { id: 7, name: "Stout Masterpiece", category: "Beer", image: "/lg7.jpg" },
-    { id: 8, name: "Spiced Gold", category: "Rum", image: "/lg8.jpg" },
-    { id: 9, name: "Oak Barrel Blend", category: "Whiskey", image: "/lg9.jpg" },
-    { id: 10, name: "London Dry Elegance", category: "Gin", image: "/lg10.jpg" },
-    { id: 11, name: "Craft Pilsner", category: "Beer", image: "/lg11.jpg" },
-    { id: 12, name: "Navy Strength Reserve", category: "Rum", image: "/lg12.jpg" },
+    { id: 1, name: "The Highland Reserve", category: "Whiskey", image: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=80&w=800&auto=format&fit=crop" },
+    { id: 2, name: "Botanical Classic", category: "Gin", image: "https://images.unsplash.com/photo-1609342475528-796791e813a3?q=80&w=800&auto=format&fit=crop" },
+    { id: 3, name: "Double IPA Draft", category: "Beer", image: "https://images.unsplash.com/photo-1580828369136-15db55b7ecde?q=80&w=800&auto=format&fit=crop" },
+    { id: 4, name: "Caribbean Dark", category: "Rum", image: "https://images.unsplash.com/photo-1614313662998-cdbd19d80d28?q=80&w=800&auto=format&fit=crop" },
+    { id: 5, name: "Aged Single Malt", category: "Whiskey", image: "https://images.unsplash.com/photo-1582222194639-66de1d061803?q=80&w=800&auto=format&fit=crop" },
+    { id: 6, name: "Pink Floral Infusion", category: "Gin", image: "https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?q=80&w=800&auto=format&fit=crop" },
+    { id: 7, name: "Stout Masterpiece", category: "Beer", image: "https://images.unsplash.com/photo-1535958631405-c14d9ddc8fdf?q=80&w=800&auto=format&fit=crop" },
+    { id: 8, name: "Spiced Gold", category: "Rum", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" },
+    { id: 9, name: "Oak Barrel Blend", category: "Whiskey", image: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=800&auto=format&fit=crop" },
+    { id: 10, name: "London Dry Elegance", category: "Gin", image: "https://images.unsplash.com/photo-1563223771-417122a762d1?q=80&w=800&auto=format&fit=crop" },
+    { id: 11, name: "Craft Pilsner", category: "Beer", image: "https://images.unsplash.com/photo-1615332579037-3c44b3660b53?q=80&w=800&auto=format&fit=crop" },
+    { id: 12, name: "Navy Strength Reserve", category: "Rum", image: "https://images.unsplash.com/photo-1593006437989-1fcb80145c2f?q=80&w=800&auto=format&fit=crop" },
 ];
 
 const categories = ["All", "Whiskey", "Gin", "Beer", "Rum"];

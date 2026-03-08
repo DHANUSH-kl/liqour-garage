@@ -126,7 +126,9 @@ const Collection = () => {
                         <p className={styles.description}>
                             Discover our exclusive range of premium spirits, curated with unmatched precision. Explore flavors that define luxury.
                         </p>
-                        <Link href="/discover" className={styles.ctaBox}>Explore All</Link>
+                        <div>
+                            <Link href="/collection" className={styles.ctaBox}>Explore Collection</Link>
+                        </div>
                     </div>
 
                     {/* Right Side */}

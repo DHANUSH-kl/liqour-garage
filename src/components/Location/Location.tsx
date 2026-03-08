@@ -75,9 +75,9 @@ const Location = () => {
                                 <div>
                                     <h3 className={styles.infoTitle}>Address</h3>
                                     <p className={styles.infoText}>
-                                        774, Kalidasa Rd, <br />
-                                        Vijayanagar 1st Stage, Vijayanagar, <br />
-                                        Mysuru, Karnataka 570017
+                                        No. 287, Shop No. 1, <br />
+                                        Mahadeshwara Extension, <br />
+                                        Hebbalu, Mysore, India 570016
                                     </p>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ const Location = () => {
 
                         <div className="animateLeft">
                             <a
-                                href="https://maps.google.com/?q=774,+Kalidasa+Rd,+Vijayanagar+1st+Stage,+Mysuru,+Karnataka+570017"
+                                href="https://maps.google.com/?q=No.+287,+Shop+No.+1,+Mahadeshwara+Extension,+Hebbalu,+Mysore,+Karnataka+570016"
                                 target="_blank"
                                 rel="noreferrer"
                                 className={styles.directionsBtn}
@@ -123,7 +123,7 @@ const Location = () => {
                         <div className={styles.mapWrapper}>
                             <iframe
                                 title="Liquor Garage Location"
-                                src="https://www.google.com/maps?q=774,+Kalidasa+Rd,+Vijayanagar+1st+Stage,+Mysuru,+Karnataka+570017&output=embed"
+                                src="https://www.google.com/maps?q=No.+287,+Shop+No.+1,+Mahadeshwara+Extension,+Hebbalu,+Mysore,+Karnataka+570016&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

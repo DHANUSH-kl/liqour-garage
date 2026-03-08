@@ -42,7 +42,7 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li className={styles.contactItem}>
                                 <MapPin size={18} className={styles.contactIcon} />
-                                <span>774, Kalidasa Rd, Vijayanagar 1st Stage, Mysuru</span>
+                                <span>No. 287, Shop No. 1, Mahadeshwara Extension, Hebbalu, Mysore, India 570016</span>
                             </li>
                             <li className={styles.contactItem}>
                                 <Phone size={18} className={styles.contactIcon} />
