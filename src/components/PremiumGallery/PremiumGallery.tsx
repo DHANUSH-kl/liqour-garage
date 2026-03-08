@@ -70,7 +70,7 @@ const PremiumGallery = () => {
     );
 
     return (
-        <section className={styles.section} ref={containerRef}>
+        <section className={styles.section} ref={containerRef} id="gallery">
             <div className={styles.header}>
                 <h2 className={styles.title}>The Art of Pouring</h2>
                 <p className={styles.subtitle}>Discover the essence of our curated experiences.</p>

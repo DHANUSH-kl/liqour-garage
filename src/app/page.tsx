@@ -5,6 +5,7 @@ import OurImpact from "@/components/OurImpact/OurImpact";
 import CTASection from "@/components/CTASection/CTASection";
 import Location from "@/components/Location/Location";
 import PremiumGallery from "@/components/PremiumGallery/PremiumGallery";
+import Membership from "@/components/Membership/Membership";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Collection />
       <OurDifference />
       <OurImpact />
+      <Membership />
       <PremiumGallery />
       <Location />
       <CTASection />

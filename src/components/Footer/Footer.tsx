@@ -6,18 +6,6 @@ import styles from "./Footer.module.css";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            {/* Top Banner / Newsletter */}
-            <div className={styles.newsletterSection}>
-                <div className={styles.newsletterContainer}>
-                    <h3 className={styles.newsletterTitle}>Join Our Private Collection</h3>
-                    <p className={styles.newsletterText}>Subscribe to receive exclusive access to rare releases and event invitations.</p>
-                    <form className={styles.form}>
-                        <input type="email" placeholder="Your email address" className={styles.input} />
-                        <button type="button" className={styles.submitBtn}>Subscribe</button>
-                    </form>
-                </div>
-            </div>
-
             <div className={styles.mainContent}>
                 <div className={styles.grid}>
                     {/* Brand Column */}
@@ -40,23 +28,11 @@ const Footer = () => {
                     <div className={styles.linksCol}>
                         <h4 className={styles.colTitle}>Explore</h4>
                         <ul className={styles.linkList}>
-                            <li><Link href="#" className={styles.link}>Premium Spirits</Link></li>
-                            <li><Link href="#" className={styles.link}>Rare Collections</Link></li>
-                            <li><Link href="#" className={styles.link}>Fine Wines</Link></li>
-                            <li><Link href="#" className={styles.link}>Gifting</Link></li>
-                            <li><Link href="#" className={styles.link}>Accessories</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Company Links */}
-                    <div className={styles.linksCol}>
-                        <h4 className={styles.colTitle}>Company</h4>
-                        <ul className={styles.linkList}>
-                            <li><Link href="#" className={styles.link}>Our Story</Link></li>
-                            <li><Link href="#" className={styles.link}>Tasting Events</Link></li>
-                            <li><Link href="#" className={styles.link}>Careers</Link></li>
-                            <li><Link href="#" className={styles.link}>Privacy Policy</Link></li>
-                            <li><Link href="#" className={styles.link}>Terms of Service</Link></li>
+                            <li><Link href="#collection" className={styles.link}>Premium Collection</Link></li>
+                            <li><Link href="#why-us" className={styles.link}>Why Liquor Garage</Link></li>
+                            <li><Link href="#impact" className={styles.link}>Our Impact</Link></li>
+                            <li><Link href="#membership" className={styles.link}>Exclusive Membership</Link></li>
+                            <li><Link href="#gallery" className={styles.link}>Premium Gallery</Link></li>
                         </ul>
                     </div>
 
@@ -74,7 +50,7 @@ const Footer = () => {
                             </li>
                             <li className={styles.contactItem}>
                                 <Mail size={18} className={styles.contactIcon} />
-                                <span>concierge@liquorgarage.com</span>
+                                <span>liquorgaragemysore@gmail.com</span>
                             </li>
                         </ul>
                     </div>

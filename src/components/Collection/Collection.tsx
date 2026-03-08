@@ -38,23 +38,52 @@ const Collection = () => {
             });
 
             mm.add("(max-width: 768px)", () => {
-                // Mobile Animation Logic: Tilt to straight, align with text block
+                // Mobile Animation Logic: Clean exit without pinning
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: `.${styles.hero}`,
                         start: "top top",
-                        endTrigger: `.${styles.sectionIntro}`,
-                        end: "top top",
+                        end: "bottom top",
                         scrub: true,
-                        pin: `.${styles.heroBottleWrapper}`,
-                        pinSpacing: false,
                         invalidateOnRefresh: true,
                     },
                 });
 
-                // Just rotate to 0 to straighten, scale appropriately for mobile, without moving it too far down
-                tl.to(`.${styles.heroBottle}`, { rotate: 0, scale: 0.6 }, 0);
-                tl.to(`.${styles.heroContent}`, { opacity: 0 }, 0);
+                // Gently straighten, move up, and fade out so it never overlaps the section below
+                tl.to(`.${styles.heroBottle}`, { rotate: 0, y: -100, opacity: 0 }, 0);
+                tl.to(`.${styles.heroContent}`, { opacity: 0, y: -50 }, 0);
+            });
+
+            // Premium Text Reveal for Intro Section (Blur + Slide Up)
+            const leftElements = gsap.utils.toArray(`.${styles.introLeft} > *`);
+            gsap.from(leftElements, {
+                scrollTrigger: {
+                    trigger: `.${styles.sectionIntro}`,
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                },
+                y: 40,
+                opacity: 0,
+                filter: "blur(10px)",
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power3.out",
+            });
+
+            const rightElements = gsap.utils.toArray(`.${styles.ingredientsTitle}, .${styles.ingredientItem}`);
+            gsap.from(rightElements, {
+                scrollTrigger: {
+                    trigger: `.${styles.introRight}`,
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                },
+                x: 30,
+                y: 20,
+                opacity: 0,
+                filter: "blur(10px)",
+                duration: 1.2,
+                stagger: 0.2,
+                ease: "power3.out",
             });
 
             return () => mm.revert();
@@ -63,7 +92,7 @@ const Collection = () => {
     );
 
     return (
-        <div ref={containerRef} className={styles.mainContainer}>
+        <div ref={containerRef} className={styles.mainContainer} id="collection">
             {/* Hero Bottle Overlay Wrapper */}
             <div className={styles.heroBottleWrapper}>
                 <Image

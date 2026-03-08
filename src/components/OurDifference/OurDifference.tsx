@@ -18,23 +18,23 @@ const cardsData = [
         title: "100% Authentic Spirits",
         description:
             "Every bottle at Liquor Garage is sourced from trusted distributors and verified suppliers, ensuring complete authenticity and uncompromised quality.",
-        image: "https://images.unsplash.com/photo-1582222194639-66de1d061803?q=80&w=800&auto=format&fit=crop",
+        image: "/100_ Authentic Spirits.jpg",
         Icon: BadgeCheck,
     },
-    {
-        id: 2,
-        title: "Curated Premium Selection",
-        description:
-            "Our collection is carefully selected to showcase some of the finest spirits from renowned distilleries across the world.",
-        image: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=800&auto=format&fit=crop",
-        Icon: Star,
-    },
+    // {
+    //     id: 2,
+    //     title: "Curated Premium Selection",
+    //     description:
+    //         "Our collection is carefully selected to showcase some of the finest spirits from renowned distilleries across the world.",
+    //     image: "/Curated Premium Selection.jpg",
+    //     Icon: Star,
+    // },
     {
         id: 3,
         title: "Rare & Limited Bottles",
         description:
             "Discover exclusive releases, collector's editions, and rare bottles that are difficult to find elsewhere.",
-        image: "https://images.unsplash.com/photo-1614313662998-cdbd19d80d28?q=80&w=800&auto=format&fit=crop",
+        image: "/lg8.jpg",
         Icon: Sparkles,
     },
     {
@@ -42,7 +42,7 @@ const cardsData = [
         title: "Expert Recommendations",
         description:
             "Our knowledgeable team is always ready to help you choose the perfect bottle based on taste, occasion, or collection goals.",
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop",
+        image: "/Expert Recommendations.jpg",
         Icon: Users,
     },
     {
@@ -50,7 +50,7 @@ const cardsData = [
         title: "Perfect Gift Options",
         description:
             "From celebrations to corporate gifting, our premium spirits make unforgettable gifts for every special occasion.",
-        image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800&auto=format&fit=crop",
+        image: "/lg12.jpg",
         Icon: Gift,
     },
 ];
@@ -128,7 +128,7 @@ const OurDifference = () => {
     );
 
     return (
-        <section className={styles.section} ref={containerRef}>
+        <section className={styles.section} ref={containerRef} id="why-us">
             <div className={styles.headerContent} ref={textRef}>
                 <div className={`${styles.badge} revealTextDiff`}>
                     <Crown className={styles.crownIcon} size={16} />

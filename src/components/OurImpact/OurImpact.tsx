@@ -86,7 +86,7 @@ const OurImpact = () => {
     );
 
     return (
-        <section className={styles.section} ref={sectionRef}>
+        <section className={styles.section} ref={sectionRef} id="impact">
             <div className={styles.container}>
                 {/* Top Header Section */}
                 <div className={styles.header} ref={textRef}>

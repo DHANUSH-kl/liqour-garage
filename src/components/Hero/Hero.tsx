@@ -3,6 +3,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Hero.module.css";
 
@@ -158,32 +159,30 @@ const Hero = () => {
         >
           <div className={styles.premium}>PREMIUM</div>
           <h1 className={styles.title}>SPIRITS</h1>
-          
+
           <div className={styles.divider}>
             <span className={styles.dividerLine}></span>
             <span className={styles.dividerIcon}>✦</span>
             <span className={styles.dividerLine}></span>
           </div>
-          
+
           <p className={styles.description}>
             DISCOVER OUR CURATED COLLECTION OF <span>FINEST</span> LIQUORS
           </p>
-          
+
           <div className={styles.ctaWrapper}>
-            <motion.button
+            <Link
+              href="/discover"
               className={`${styles.ctaButton} ${styles.ctaButtonPrimary}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               EXPLORE
-            </motion.button>
-            <motion.button
+            </Link>
+            <Link
+              href="tel:9900447762"
               className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              DISCOVER
-            </motion.button>
+              CONTACT US
+            </Link>
           </div>
         </motion.div>
       </div>
