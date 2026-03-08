@@ -94,7 +94,7 @@ export default function LuxuryNav() {
                 <div className={styles.overlayInner}>
                     <div className={styles.linksContainer}>
                         {[
-                            { label: "COLLECTION", href: "/#collection" },
+                            { label: "DISCOVER", href: "/discover" },
                             { label: "WHY US", href: "/#why-us" },
                             { label: "IMPACT", href: "/#impact" },
                             { label: "MEMBERSHIP", href: "/#membership" },
