@@ -5,18 +5,20 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { Play } from "lucide-react";
+
 import styles from "./PremiumGallery.module.css";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
 
-// 12 Local images directly from public directory
-const images = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    url: `/lg${i + 1}.jpg`,
-}));
+// Local images directly from public directory - exactly 4 to avoid duplication
+const images = [
+    { id: 1, url: '/lg1-.jpg' },
+    { id: 2, url: '/lg2-.jpg' },
+    { id: 3, url: '/lg3-.jpg' },
+    { id: 4, url: '/lg4-.jpg' },
+];
 
 const PremiumGallery = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -79,7 +81,7 @@ const PremiumGallery = () => {
             <div className={styles.galleryGrid}>
                 {/* Column 1 */}
                 <div className={`${styles.column} ${styles.colOuter}`} ref={column1Ref}>
-                    {images.slice(0, 4).map((img) => (
+                    {images.slice(0, 1).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
                             <div className={styles.overlay}></div>
@@ -89,23 +91,17 @@ const PremiumGallery = () => {
 
                 {/* Column 2 (Center) */}
                 <div className={`${styles.column} ${styles.colCenter}`} ref={column2Ref}>
-                    {images.slice(4, 8).map((img) => (
+                    {images.slice(1, 3).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
-                            <div className={styles.overlay}>
-                                {img.id === 6 && (
-                                    <div className={styles.playBtn}>
-                                        <Play size={24} color="white" fill="white" />
-                                    </div>
-                                )}
-                            </div>
+                            <div className={styles.overlay}></div>
                         </div>
                     ))}
                 </div>
 
                 {/* Column 3 */}
                 <div className={`${styles.column} ${styles.colOuter}`} ref={column3Ref}>
-                    {images.slice(8, 12).map((img) => (
+                    {images.slice(3, 4).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
                             <div className={styles.overlay}></div>
