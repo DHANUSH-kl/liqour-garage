@@ -18,6 +18,12 @@ const images = [
     { id: 2, url: '/lg2-.jpg' },
     { id: 3, url: '/lg3-.jpg' },
     { id: 4, url: '/lg4-.jpg' },
+    { id: 5, url: '/lg5-.jpeg' },
+    { id: 6, url: '/lg6-.jpeg' },
+    { id: 7, url: '/lg7-.jpeg' },
+    { id: 8, url: '/lg8-.jpeg' },
+    { id: 9, url: '/lg9-.jpeg' },
+    { id: 10, url: '/lg10-.jpeg' },
 ];
 
 const PremiumGallery = () => {
@@ -81,7 +87,7 @@ const PremiumGallery = () => {
             <div className={styles.galleryGrid}>
                 {/* Column 1 */}
                 <div className={`${styles.column} ${styles.colOuter}`} ref={column1Ref}>
-                    {images.slice(0, 1).map((img) => (
+                    {images.slice(0, 3).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
                             <div className={styles.overlay}></div>
@@ -91,7 +97,7 @@ const PremiumGallery = () => {
 
                 {/* Column 2 (Center) */}
                 <div className={`${styles.column} ${styles.colCenter}`} ref={column2Ref}>
-                    {images.slice(1, 3).map((img) => (
+                    {images.slice(3, 7).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
                             <div className={styles.overlay}></div>
@@ -101,7 +107,7 @@ const PremiumGallery = () => {
 
                 {/* Column 3 */}
                 <div className={`${styles.column} ${styles.colOuter}`} ref={column3Ref}>
-                    {images.slice(3, 4).map((img) => (
+                    {images.slice(7, 10).map((img) => (
                         <div key={img.id} className={styles.galleryItem}>
                             <img src={img.url} alt="Premium Experience" className={styles.image} loading="lazy" />
                             <div className={styles.overlay}></div>
