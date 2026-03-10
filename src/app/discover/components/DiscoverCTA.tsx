@@ -39,7 +39,7 @@ export default function DiscoverCTA() {
                         Our team can help you find the perfect bottle for any occasion.
                     </p>
                     <div className={styles.buttons}>
-                        <a href="tel:9900447762" className={styles.primaryBtn}>Call Now</a>
+                        <a href="tel:7899613040" className={styles.primaryBtn}>Call Now</a>
                         <a href="#location" className={styles.secondaryBtn}>Store Location</a>
                     </div>
                 </div>

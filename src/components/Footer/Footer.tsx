@@ -40,13 +40,16 @@ const Footer = () => {
                     <div className={styles.contactCol}>
                         <h4 className={styles.colTitle}>Contact</h4>
                         <ul className={styles.contactList}>
-                            <li className={styles.contactItem}>
-                                <MapPin size={18} className={styles.contactIcon} />
-                                <span>No. 287, Shop No. 1, Mahadeshwara Extension, Hebbalu, Mysore, India 570016</span>
+                            <li className={styles.contactItem} style={{ alignItems: "flex-start" }}>
+                                <MapPin size={18} className={styles.contactIcon} style={{ marginTop: "4px" }} />
+                                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                                    <span><strong>Hebbalu:</strong> No. 287, Shop No. 1, Mahadeshwara Extension, Hebbalu, Mysore, India 570016</span>
+                                    <span><strong>Ring Rd:</strong> 7JJ4+CJQ, Ring Rd, Kanakadasa Nagar, Somanath Nagar, Mysuru, Karnataka 570033</span>
+                                </div>
                             </li>
                             <li className={styles.contactItem}>
                                 <Phone size={18} className={styles.contactIcon} />
-                                <span>+91 (0) 000 000 0000</span>
+                                <span>+91 78996 13040</span>
                             </li>
                             <li className={styles.contactItem}>
                                 <Mail size={18} className={styles.contactIcon} />

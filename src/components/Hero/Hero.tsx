@@ -178,7 +178,7 @@ const Hero = () => {
               EXPLORE
             </Link>
             <Link
-              href="tel:9900447762"
+              href="tel:7899613040"
               className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
             >
               CONTACT US
